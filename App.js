@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import News from './Screen/News';
 
 const stackNavigator = createStackNavigator({
-  News: News,
+  HyoNews: News,
 });
 
 const App = createAppContainer(stackNavigator);

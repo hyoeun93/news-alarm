@@ -31,7 +31,6 @@ const News = ({ navigation }) => {
   if (!news) {
     return null;
   }
-  console.log(news);
   return (
     <View>
       <FlatList
