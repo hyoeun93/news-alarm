@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import News from './Screen/News';
 
-const stackNavigator = createStackNavigator({
-  HyoNews: News,
-});
+const Stack = createStackNavigator();
 
-const App = createAppContainer(stackNavigator);
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Hyo's News" component={News} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 export default App;
